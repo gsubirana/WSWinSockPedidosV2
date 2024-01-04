@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGESTCRMCE" targetNamespace="http://tempuri.org/dsGESTCRMCE.xsd" xmlns:mstns="http://tempuri.org/dsGESTCRMCE.xsd" xmlns="http://tempuri.org/dsGESTCRMCE.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=EFLORENZA-HP\SQLEXPRESS;Initial Catalog=STADA_PEDIDOS_RECEPCION;User ID=sa" IsAppSettingsProperty="false" Modifier="Assembly" Name="eflorenza-hp\sqlexpress.STADA_PEDIDOS_RECEPCION.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=GEMMA-HP\SQLExpress;Initial Catalog=GESTCRMCE;User ID=sa;Password=Bayvit1429" IsAppSettingsProperty="false" Modifier="Assembly" Name="gemma-hp\sqlexpress.GESTCRMCE.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=GEMMA-HP\sqlexpress;Initial Catalog=STADA_PEDIDOS_RECEPCION;User ID=sa;Password=Bayvit1429" IsAppSettingsProperty="false" Modifier="Assembly" Name="gemma-hp\sqlexpress.STADA_PEDIDOS_RECEPCION.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=AZSTESCRMDBT;Initial Catalog=GESTCRMCE;User ID=sa;Password=Bayvit1429" IsAppSettingsProperty="false" Modifier="Assembly" Name="AZSTESCRMDBT.GESTCRMCETEST.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGESTCRMCE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGESTCRMCE" msprop:Generator_UserDSName="dsGESTCRMCE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ListaMaterialesConSustituto" msprop:Generator_TableClassName="ListaMaterialesConSustitutoDataTable" msprop:Generator_TableVarName="tableListaMaterialesConSustituto" msprop:Generator_TablePropName="ListaMaterialesConSustituto" msprop:Generator_RowDeletingName="ListaMaterialesConSustitutoRowDeleting" msprop:Generator_RowChangingName="ListaMaterialesConSustitutoRowChanging" msprop:Generator_RowEvHandlerName="ListaMaterialesConSustitutoRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaMaterialesConSustitutoRowDeleted" msprop:Generator_UserTableName="ListaMaterialesConSustituto" msprop:Generator_RowChangedName="ListaMaterialesConSustitutoRowChanged" msprop:Generator_RowEvArgName="ListaMaterialesConSustitutoRowChangeEvent" msprop:Generator_RowClassName="ListaMaterialesConSustitutoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaMaterialesBloqueados" msprop:Generator_TableClassName="ListaMaterialesBloqueadosDataTable" msprop:Generator_TableVarName="tableListaMaterialesBloqueados" msprop:Generator_RowChangedName="ListaMaterialesBloqueadosRowChanged" msprop:Generator_TablePropName="ListaMaterialesBloqueados" msprop:Generator_RowDeletingName="ListaMaterialesBloqueadosRowDeleting" msprop:Generator_RowChangingName="ListaMaterialesBloqueadosRowChanging" msprop:Generator_RowEvHandlerName="ListaMaterialesBloqueadosRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaMaterialesBloqueadosRowDeleted" msprop:Generator_RowClassName="ListaMaterialesBloqueadosRow" msprop:Generator_UserTableName="ListaMaterialesBloqueados" msprop:Generator_RowEvArgName="ListaMaterialesBloqueadosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Interlocutor" msprop:Generator_TableClassName="InterlocutorDataTable" msprop:Generator_TableVarName="tableInterlocutor" msprop:Generator_TablePropName="Interlocutor" msprop:Generator_RowDeletingName="InterlocutorRowDeleting" msprop:Generator_RowChangingName="InterlocutorRowChanging" msprop:Generator_RowEvHandlerName="InterlocutorRowChangeEventHandler" msprop:Generator_RowDeletedName="InterlocutorRowDeleted" msprop:Generator_UserTableName="Interlocutor" msprop:Generator_RowChangedName="InterlocutorRowChanged" msprop:Generator_RowEvArgName="InterlocutorRowChangeEvent" msprop:Generator_RowClassName="InterlocutorRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iIdInterlocutor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columniIdInterlocutor" msprop:Generator_ColumnPropNameInRow="iIdInterlocutor" msprop:Generator_ColumnPropNameInTable="iIdInterlocutorColumn" msprop:Generator_UserColumnName="iIdInterlocutor" type="xs:int" />
+              <xs:element name="sIdInterlocutor" msprop:Generator_ColumnVarNameInTable="columnsIdInterlocutor" msprop:Generator_ColumnPropNameInRow="sIdInterlocutor" msprop:Generator_ColumnPropNameInTable="sIdInterlocutorColumn" msprop:Generator_UserColumnName="sIdInterlocutor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tNombre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntNombre" msprop:Generator_ColumnPropNameInRow="tNombre" msprop:Generator_ColumnPropNameInTable="tNombreColumn" msprop:Generator_UserColumnName="tNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaMayoristasClientes_SAP" msprop:Generator_TableClassName="ListaMayoristasClientes_SAPDataTable" msprop:Generator_TableVarName="tableListaMayoristasClientes_SAP" msprop:Generator_RowChangedName="ListaMayoristasClientes_SAPRowChanged" msprop:Generator_TablePropName="ListaMayoristasClientes_SAP" msprop:Generator_RowDeletingName="ListaMayoristasClientes_SAPRowDeleting" msprop:Generator_RowChangingName="ListaMayoristasClientes_SAPRowChanging" msprop:Generator_RowEvHandlerName="ListaMayoristasClientes_SAPRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaMayoristasClientes_SAPRowDeleted" msprop:Generator_RowClassName="ListaMayoristasClientes_SAPRow" msprop:Generator_UserTableName="ListaMayoristasClientes_SAP" msprop:Generator_RowEvArgName="ListaMayoristasClientes_SAPRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sGrupoClientes" msprop:Generator_ColumnVarNameInTable="columnsGrupoClientes" msprop:Generator_ColumnPropNameInRow="sGrupoClientes" msprop:Generator_ColumnPropNameInTable="sGrupoClientesColumn" msprop:Generator_UserColumnName="sGrupoClientes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tInterlocutor" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntInterlocutor" msprop:Generator_ColumnPropNameInRow="tInterlocutor" msprop:Generator_ColumnPropNameInTable="tInterlocutorColumn" msprop:Generator_UserColumnName="tInterlocutor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iIdClienteMayorista" msprop:Generator_ColumnVarNameInTable="columniIdClienteMayorista" msprop:Generator_ColumnPropNameInRow="iIdClienteMayorista" msprop:Generator_ColumnPropNameInTable="iIdClienteMayoristaColumn" msprop:Generator_UserColumnName="iIdClienteMayorista" type="xs:int" />
+              <xs:element name="sIdCliente" msprop:Generator_ColumnVarNameInTable="columnsIdCliente" msprop:Generator_ColumnPropNameInRow="sIdCliente" msprop:Generator_ColumnPropNameInTable="sIdClienteColumn" msprop:Generator_UserColumnName="sIdCliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sNombre" msprop:Generator_ColumnVarNameInTable="columnsNombre" msprop:Generator_ColumnPropNameInRow="sNombre" msprop:Generator_ColumnPropNameInTable="sNombreColumn" msprop:Generator_UserColumnName="sNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sIdCodClientedelMay" msprop:Generator_ColumnVarNameInTable="columnsIdCodClientedelMay" msprop:Generator_ColumnPropNameInRow="sIdCodClientedelMay" msprop:Generator_ColumnPropNameInTable="sIdCodClientedelMayColumn" msprop:Generator_UserColumnName="sIdCodClientedelMay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IdCliente" msprop:Generator_TableClassName="IdClienteDataTable" msprop:Generator_TableVarName="tableIdCliente" msprop:Generator_RowChangedName="IdClienteRowChanged" msprop:Generator_TablePropName="IdCliente" msprop:Generator_RowDeletingName="IdClienteRowDeleting" msprop:Generator_RowChangingName="IdClienteRowChanging" msprop:Generator_RowEvHandlerName="IdClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="IdClienteRowDeleted" msprop:Generator_RowClassName="IdClienteRow" msprop:Generator_UserTableName="IdCliente" msprop:Generator_RowEvArgName="IdClienteRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iIdCliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columniIdCliente" msprop:Generator_ColumnPropNameInRow="iIdCliente" msprop:Generator_ColumnPropNameInTable="iIdClienteColumn" msprop:Generator_UserColumnName="iIdCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="sIdCliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsIdCliente" msprop:Generator_ColumnPropNameInRow="sIdCliente" msprop:Generator_ColumnPropNameInTable="sIdClienteColumn" msprop:Generator_UserColumnName="sIdCliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tNombre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntNombre" msprop:Generator_ColumnPropNameInRow="tNombre" msprop:Generator_ColumnPropNameInTable="tNombreColumn" msprop:Generator_UserColumnName="tNombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tProxObj" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntProxObj" msprop:Generator_ColumnPropNameInRow="tProxObj" msprop:Generator_ColumnPropNameInTable="tProxObjColumn" msprop:Generator_UserColumnName="tProxObj" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaSustitucionMateriales" msprop:Generator_TableClassName="ListaSustitucionMaterialesDataTable" msprop:Generator_TableVarName="tableListaSustitucionMateriales" msprop:Generator_TablePropName="ListaSustitucionMateriales" msprop:Generator_RowDeletingName="ListaSustitucionMaterialesRowDeleting" msprop:Generator_RowChangingName="ListaSustitucionMaterialesRowChanging" msprop:Generator_RowEvHandlerName="ListaSustitucionMaterialesRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaSustitucionMaterialesRowDeleted" msprop:Generator_UserTableName="ListaSustitucionMateriales" msprop:Generator_RowChangedName="ListaSustitucionMaterialesRowChanged" msprop:Generator_RowEvArgName="ListaSustitucionMaterialesRowChangeEvent" msprop:Generator_RowClassName="ListaSustitucionMaterialesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sCodNacionalSustituto" msprop:Generator_ColumnVarNameInTable="columnsCodNacionalSustituto" msprop:Generator_ColumnPropNameInRow="sCodNacionalSustituto" msprop:Generator_ColumnPropNameInTable="sCodNacionalSustitutoColumn" msprop:Generator_UserColumnName="sCodNacionalSustituto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SRMayoristas" msprop:Generator_TableClassName="SRMayoristasDataTable" msprop:Generator_TableVarName="tableSRMayoristas" msprop:Generator_RowChangedName="SRMayoristasRowChanged" msprop:Generator_TablePropName="SRMayoristas" msprop:Generator_RowDeletingName="SRMayoristasRowDeleting" msprop:Generator_RowChangingName="SRMayoristasRowChanging" msprop:Generator_RowEvHandlerName="SRMayoristasRowChangeEventHandler" msprop:Generator_RowDeletedName="SRMayoristasRowDeleted" msprop:Generator_RowClassName="SRMayoristasRow" msprop:Generator_UserTableName="SRMayoristas" msprop:Generator_RowEvArgName="SRMayoristasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codMay" msprop:Generator_ColumnVarNameInTable="columncodMay" msprop:Generator_ColumnPropNameInRow="codMay" msprop:Generator_ColumnPropNameInTable="codMayColumn" msprop:Generator_UserColumnName="codMay">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codMayEquivalente" msprop:Generator_ColumnVarNameInTable="columncodMayEquivalente" msprop:Generator_ColumnPropNameInRow="codMayEquivalente" msprop:Generator_ColumnPropNameInTable="codMayEquivalenteColumn" msprop:Generator_UserColumnName="codMayEquivalente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListaMaterialesConSustituto" />
+      <xs:field xpath="mstns:sCodNacional" />
+    </xs:unique>
+    <xs:unique name="ListaMaterialesBloqueadosKey1">
+      <xs:selector xpath=".//mstns:ListaMaterialesBloqueados" />
+      <xs:field xpath="mstns:sCodNacional" />
+    </xs:unique>
+    <xs:unique name="Interlocutor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Interlocutor" />
+      <xs:field xpath="mstns:iIdInterlocutor" />
+    </xs:unique>
+    <xs:unique name="ListaSustitucionMateriales_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListaSustitucionMateriales" />
+      <xs:field xpath="mstns:sCodNacional" />
+    </xs:unique>
+    <xs:unique name="SRMayoristas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SRMayoristas" />
+      <xs:field xpath="mstns:codMay" />
+      <xs:field xpath="mstns:codMayEquivalente" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

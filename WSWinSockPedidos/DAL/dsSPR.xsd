@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSPR" targetNamespace="http://tempuri.org/dsSPR.xsd" xmlns:mstns="http://tempuri.org/dsSPR.xsd" xmlns="http://tempuri.org/dsSPR.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="STADA_PEDIDOS_RECEPCIONConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="STADA_PEDIDOS_RECEPCIONConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DAL.Properties.Settings.GlobalReference.Default.STADA_PEDIDOS_RECEPCIONConnectionString" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=EFLORENZA-HP\SQLEXPRESS;Initial Catalog=STADA_PEDIDOS_RECEPCION;User ID=sa;Password=Bayvit1429" IsAppSettingsProperty="false" Modifier="Assembly" Name="eflorenza-hp\sqlexpress.STADA_PEDIDOS_RECEPCION.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSPR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSPR" msprop:Generator_UserDSName="dsSPR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MaterialesAparte" msprop:Generator_TableClassName="MaterialesAparteDataTable" msprop:Generator_TableVarName="tableMaterialesAparte" msprop:Generator_RowChangedName="MaterialesAparteRowChanged" msprop:Generator_TablePropName="MaterialesAparte" msprop:Generator_RowDeletingName="MaterialesAparteRowDeleting" msprop:Generator_RowChangingName="MaterialesAparteRowChanging" msprop:Generator_RowEvHandlerName="MaterialesAparteRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialesAparteRowDeleted" msprop:Generator_RowClassName="MaterialesAparteRow" msprop:Generator_UserTableName="MaterialesAparte" msprop:Generator_RowEvArgName="MaterialesAparteRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sCodNacional" msdata:Caption="sIdMaterial" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bEsCH" msprop:Generator_ColumnVarNameInTable="columnbEsCH" msprop:Generator_ColumnPropNameInRow="bEsCH" msprop:Generator_ColumnPropNameInTable="bEsCHColumn" msprop:Generator_UserColumnName="bEsCH" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaCondicionesRegalo" msprop:Generator_TableClassName="ListaCondicionesRegaloDataTable" msprop:Generator_TableVarName="tableListaCondicionesRegalo" msprop:Generator_RowChangedName="ListaCondicionesRegaloRowChanged" msprop:Generator_TablePropName="ListaCondicionesRegalo" msprop:Generator_RowDeletingName="ListaCondicionesRegaloRowDeleting" msprop:Generator_RowChangingName="ListaCondicionesRegaloRowChanging" msprop:Generator_RowEvHandlerName="ListaCondicionesRegaloRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaCondicionesRegaloRowDeleted" msprop:Generator_RowClassName="ListaCondicionesRegaloRow" msprop:Generator_UserTableName="ListaCondicionesRegalo" msprop:Generator_RowEvArgName="ListaCondicionesRegaloRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sIdMaterialRegalo" msprop:Generator_ColumnVarNameInTable="columnsIdMaterialRegalo" msprop:Generator_ColumnPropNameInRow="sIdMaterialRegalo" msprop:Generator_ColumnPropNameInTable="sIdMaterialRegaloColumn" msprop:Generator_UserColumnName="sIdMaterialRegalo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sCodNacionalNoRegalo" msprop:Generator_ColumnVarNameInTable="columnsCodNacionalNoRegalo" msprop:Generator_ColumnPropNameInRow="sCodNacionalNoRegalo" msprop:Generator_ColumnPropNameInTable="sCodNacionalNoRegaloColumn" msprop:Generator_UserColumnName="sCodNacionalNoRegalo" type="xs:string" minOccurs="0" />
+              <xs:element name="iUnidadesMin" msprop:Generator_ColumnVarNameInTable="columniUnidadesMin" msprop:Generator_ColumnPropNameInRow="iUnidadesMin" msprop:Generator_ColumnPropNameInTable="iUnidadesMinColumn" msprop:Generator_UserColumnName="iUnidadesMin" type="xs:int" />
+              <xs:element name="iUnidadesRegalar" msprop:Generator_ColumnVarNameInTable="columniUnidadesRegalar" msprop:Generator_ColumnPropNameInRow="iUnidadesRegalar" msprop:Generator_ColumnPropNameInTable="iUnidadesRegalarColumn" msprop:Generator_UserColumnName="iUnidadesRegalar" type="xs:int" />
+              <xs:element name="bAplicarMultiplo" msprop:Generator_ColumnVarNameInTable="columnbAplicarMultiplo" msprop:Generator_ColumnPropNameInRow="bAplicarMultiplo" msprop:Generator_ColumnPropNameInTable="bAplicarMultiploColumn" msprop:Generator_UserColumnName="bAplicarMultiplo" type="xs:boolean" />
+              <xs:element name="bEsRegalo" msprop:Generator_ColumnVarNameInTable="columnbEsRegalo" msprop:Generator_ColumnPropNameInRow="bEsRegalo" msprop:Generator_ColumnPropNameInTable="bEsRegaloColumn" msprop:Generator_UserColumnName="bEsRegalo" type="xs:boolean" />
+              <xs:element name="sIdMaterial" msprop:Generator_ColumnVarNameInTable="columnsIdMaterial" msprop:Generator_ColumnPropNameInRow="sIdMaterial" msprop:Generator_ColumnPropNameInTable="sIdMaterialColumn" msprop:Generator_UserColumnName="sIdMaterial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional" type="xs:string" minOccurs="0" />
+              <xs:element name="sIdTipoPedido" msprop:Generator_ColumnVarNameInTable="columnsIdTipoPedido" msprop:Generator_ColumnPropNameInRow="sIdTipoPedido" msprop:Generator_ColumnPropNameInTable="sIdTipoPedidoColumn" msprop:Generator_UserColumnName="sIdTipoPedido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bPartePedido" msprop:Generator_ColumnVarNameInTable="columnbPartePedido" msprop:Generator_ColumnPropNameInRow="bPartePedido" msprop:Generator_ColumnPropNameInTable="bPartePedidoColumn" msprop:Generator_UserColumnName="bPartePedido" type="xs:boolean" minOccurs="0" />
+              <xs:element name="sGrupo" msprop:Generator_ColumnVarNameInTable="columnsGrupo" msprop:Generator_ColumnPropNameInRow="sGrupo" msprop:Generator_ColumnPropNameInTable="sGrupoColumn" msprop:Generator_UserColumnName="sGrupo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sFichero" msprop:Generator_ColumnVarNameInTable="columnsFichero" msprop:Generator_ColumnPropNameInRow="sFichero" msprop:Generator_ColumnPropNameInTable="sFicheroColumn" msprop:Generator_UserColumnName="sFichero" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ficheros" msprop:Generator_TableClassName="FicherosDataTable" msprop:Generator_TableVarName="tableFicheros" msprop:Generator_RowChangedName="FicherosRowChanged" msprop:Generator_TablePropName="Ficheros" msprop:Generator_RowDeletingName="FicherosRowDeleting" msprop:Generator_RowChangingName="FicherosRowChanging" msprop:Generator_RowEvHandlerName="FicherosRowChangeEventHandler" msprop:Generator_RowDeletedName="FicherosRowDeleted" msprop:Generator_RowClassName="FicherosRow" msprop:Generator_UserTableName="Ficheros" msprop:Generator_RowEvArgName="FicherosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sFichero" msprop:Generator_ColumnVarNameInTable="columnsFichero" msprop:Generator_ColumnPropNameInRow="sFichero" msprop:Generator_ColumnPropNameInTable="sFicheroColumn" msprop:Generator_UserColumnName="sFichero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaMaterialesAparte" msprop:Generator_TableClassName="ListaMaterialesAparteDataTable" msprop:Generator_TableVarName="tableListaMaterialesAparte" msprop:Generator_TablePropName="ListaMaterialesAparte" msprop:Generator_RowDeletingName="ListaMaterialesAparteRowDeleting" msprop:Generator_RowChangingName="ListaMaterialesAparteRowChanging" msprop:Generator_RowEvHandlerName="ListaMaterialesAparteRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaMaterialesAparteRowDeleted" msprop:Generator_UserTableName="ListaMaterialesAparte" msprop:Generator_RowChangedName="ListaMaterialesAparteRowChanged" msprop:Generator_RowEvArgName="ListaMaterialesAparteRowChangeEvent" msprop:Generator_RowClassName="ListaMaterialesAparteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sIdMaterial" msprop:Generator_ColumnVarNameInTable="columnsIdMaterial" msprop:Generator_ColumnPropNameInRow="sIdMaterial" msprop:Generator_ColumnPropNameInTable="sIdMaterialColumn" msprop:Generator_UserColumnName="sIdMaterial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sMaterial" msprop:Generator_ColumnVarNameInTable="columnsMaterial" msprop:Generator_ColumnPropNameInRow="sMaterial" msprop:Generator_ColumnPropNameInTable="sMaterialColumn" msprop:Generator_UserColumnName="sMaterial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bEsCH" msprop:Generator_ColumnVarNameInTable="columnbEsCH" msprop:Generator_ColumnPropNameInRow="bEsCH" msprop:Generator_ColumnPropNameInTable="bEsCHColumn" msprop:Generator_UserColumnName="bEsCH" type="xs:boolean" />
+              <xs:element name="sTipoPedido" msprop:Generator_ColumnVarNameInTable="columnsTipoPedido" msprop:Generator_ColumnPropNameInRow="sTipoPedido" msprop:Generator_ColumnPropNameInTable="sTipoPedidoColumn" msprop:Generator_UserColumnName="sTipoPedido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sFichero" msprop:Generator_ColumnVarNameInTable="columnsFichero" msprop:Generator_ColumnPropNameInRow="sFichero" msprop:Generator_ColumnPropNameInTable="sFicheroColumn" msprop:Generator_UserColumnName="sFichero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaEstupefacientes" msprop:Generator_TableClassName="ListaEstupefacientesDataTable" msprop:Generator_TableVarName="tableListaEstupefacientes" msprop:Generator_RowChangedName="ListaEstupefacientesRowChanged" msprop:Generator_TablePropName="ListaEstupefacientes" msprop:Generator_RowDeletingName="ListaEstupefacientesRowDeleting" msprop:Generator_RowChangingName="ListaEstupefacientesRowChanging" msprop:Generator_RowEvHandlerName="ListaEstupefacientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaEstupefacientesRowDeleted" msprop:Generator_RowClassName="ListaEstupefacientesRow" msprop:Generator_UserTableName="ListaEstupefacientes" msprop:Generator_RowEvArgName="ListaEstupefacientesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaCodsMaterialesRechazo" msprop:Generator_TableClassName="ListaCodsMaterialesRechazoDataTable" msprop:Generator_TableVarName="tableListaCodsMaterialesRechazo" msprop:Generator_TablePropName="ListaCodsMaterialesRechazo" msprop:Generator_RowDeletingName="ListaCodsMaterialesRechazoRowDeleting" msprop:Generator_RowChangingName="ListaCodsMaterialesRechazoRowChanging" msprop:Generator_RowEvHandlerName="ListaCodsMaterialesRechazoRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaCodsMaterialesRechazoRowDeleted" msprop:Generator_UserTableName="ListaCodsMaterialesRechazo" msprop:Generator_RowChangedName="ListaCodsMaterialesRechazoRowChanged" msprop:Generator_RowEvArgName="ListaCodsMaterialesRechazoRowChangeEvent" msprop:Generator_RowClassName="ListaCodsMaterialesRechazoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
