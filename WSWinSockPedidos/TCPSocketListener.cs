@@ -191,6 +191,10 @@ namespace WSWinSockPedidos
                     size = _m_clientSocket.Receive(byteBuffer);
                     _m_currentReceiveDateTime = DateTime.Now;
 
+                    // Inici implementació --Alex Diaz 05/01/2024--
+                    // Comproba que el valor de size no sigui 0 perquè quan pren aquest valor la funció ParseReceiveBuffer entra en un bucle infinit
+                    // En cas de que el size sigui 0 vol dir que s'ha realitzat la connexió sense enviar cap dada
+                    // Per tant es marca el thread per borrar i es tanca la connexió
                     if (size == 0)
                     {
                         _m_markedForDeletion = true;
@@ -210,6 +214,7 @@ namespace WSWinSockPedidos
                                 ProcesaPedido();
                         }
                     }
+                    // Final implementació --Alex Diaz 05/01/2024--
 
 
                     //---- GSG (03/02/2017)
@@ -289,7 +294,7 @@ namespace WSWinSockPedidos
 
             do
             {
-                //TODO: COMPROBAR QUE EL SALTO DE LINEA SEA DE WINDOWS PORQUE SI ES DE LINUX O MAC PETA (BUCLE INFINITO)
+                // COMPROBAR QUE EL SALTO DE LINEA SEA DE WINDOWS PORQUE SI ES DE LINUX O MAC PETA (BUCLE INFINITO)
                 lineEndIndex = data.IndexOf("\r\n");
 
                 if (lineEndIndex != -1)
@@ -312,7 +317,7 @@ namespace WSWinSockPedidos
                         funcionesIncidencias.SendTrazaToLogs("linia recibida " + lin, _sNomfitxerIncidencies_traza);
 
                         // Inici implementació --Alex Diaz 19/12/2023--
-                        // Funció implementada perque el servei no caigui quan es reben peticions que no segueixen el protocol
+                        // Funció implementada perque el servei no caigui quan es reben peticions que no segueixen el protocol fedicom
                         // Funció que comprova si lin es diferent als codis del protocol, i si es diferent ha de tancar la conexio
                         if (lin.Length < 4)
                         {

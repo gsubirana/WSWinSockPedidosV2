@@ -16,8 +16,8 @@ namespace WSWinSockPedidos
     {
         public static String INI_FILE = "";
 
-        private Int32 _ipNport = 3003; //Està al fitxer ini. Valor per defecte
-        private IPAddress localAddr = IPAddress.Parse("172.23.220.76"); //Està al fitxer ini. Valor per defecte
+        private Int32 _ipNport = 3001; //Està al fitxer ini. Valor per defecte
+        private IPAddress localAddr = IPAddress.Parse("172.31.233.18"); //Està al fitxer ini. Valor per defecte
 
         private TcpListener _m_server = null;
         private bool _m_stopServer = false;
