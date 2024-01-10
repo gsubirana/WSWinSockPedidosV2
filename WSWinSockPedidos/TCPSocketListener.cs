@@ -324,7 +324,7 @@ namespace WSWinSockPedidos
                             _m_markedForDeletion = true;
                             TancarConnexio();
                         }
-                        else if (lin.Substring(0, 4) != "0101" && lin.Substring(0, 4) != "0199" && lin.Substring(0, 4) != "1010" && lin.Substring(0, 4) != "1020" && lin.Substring(0, 4) != "1030" && lin.Substring(0, 4) != "1050" && lin.Substring(0, 4) != "1040")                       
+                        else if (lin.Substring(0, 4) != "0101" && lin.Substring(0, 4) != "0102" && lin.Substring(0, 4) != "0199" && lin.Substring(0, 4) != "1010" && lin.Substring(0, 4) != "1020" && lin.Substring(0, 4) != "1030" && lin.Substring(0, 4) != "1050" && lin.Substring(0, 4) != "1040")                       
                         {
                             _m_markedForDeletion = true;
                             TancarConnexio();

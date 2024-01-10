@@ -40,8 +40,8 @@
             // serviceInstaller1
             // 
             this.serviceInstaller1.Description = "Recepción de Pedidos";
-            this.serviceInstaller1.DisplayName = "WSWinSockPedidosV2";
-            this.serviceInstaller1.ServiceName = "WSWinSockPedidosV2";
+            this.serviceInstaller1.DisplayName = "WSWinSockPedidos";
+            this.serviceInstaller1.ServiceName = "WSWinSockPedidos";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
