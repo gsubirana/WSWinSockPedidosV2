@@ -385,7 +385,6 @@ namespace WSWinSockPedidos
                         pedido.listPedidosModify.Add(sLin);
                         break;
                     case "1020":
-                    case "1030":
                         // En la tabla de materiales los sustitutos pueden estar sólo con 6 dígitos o bien con el EAN-13
 
                         materialComArriba = sLin.Substring(4, 13); // Código tal cual llega (pot venir en EAN-13 o no)                    
@@ -402,6 +401,36 @@ namespace WSWinSockPedidos
                         if (item.Count() > 0)
                         {
                             string s1 = item.FirstOrDefault().s1;
+
+                            var materialRepeSub = pedido.listPedidosOriginal
+                                .Where(x => x.Substring(0, 4) == "1020" || x.Substring(0, 4) == "1030")
+                                .Where(x => x.Substring(10, 7).Substring(1, 6) == s1 || x.Substring(10, 7).Substring(0, 6) == s1);
+
+                            if (materialRepeSub.Count() >= 1)
+                                pedido.listPedidosModify.Add(sLin.Substring(0, 4) + materialRepeSub.FirstOrDefault().Substring(4, 13) + sLin.Substring(17));
+                            else
+                                pedido.listPedidosModify.Add(sLin);
+                        }
+                        else
+                            pedido.listPedidosModify.Add(sLin);
+                        break;
+                    case "1030":
+                        // En la tabla de materiales los sustitutos pueden estar sólo con 6 dígitos o bien con el EAN-13
+
+                        materialComArriba = sLin.Substring(4, 13); // Código tal cual llega (pot venir en EAN-13 o no)                    
+                        materialTractat = sLin.Substring(10, 7);
+                        if (materialTractat.Substring(0, 1) == "0") // No viene el dígito de control --> nos quedamos con los 6 de la derecha
+                            materialTractat = materialTractat.Substring(1, 6);
+                        else // Viene el dígito de control (tanto si el último dígito es 0 como si no nos quedamos con los 6 primeros pq no importa el dc)
+                            materialTractat = materialTractat.Substring(0, 6);
+
+                        // Es material sustituto?
+                        var item2 = pedido.ExtraListasPedidos.listSubstituciones.Where(x => x.s2 == materialComArriba || x.s2 == materialTractat);
+
+                        // Si sí --> mirar si el sustituido está en el pedido
+                        if (item2.Count() > 0)
+                        {
+                            string s1 = item2.FirstOrDefault().s1;
 
                             var materialRepeSub = pedido.listPedidosOriginal
                                 .Where(x => x.Substring(0, 4) == "1020" || x.Substring(0, 4) == "1030")

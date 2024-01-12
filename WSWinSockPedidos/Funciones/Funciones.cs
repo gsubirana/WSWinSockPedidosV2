@@ -116,10 +116,20 @@ namespace WSWinSockPedidos.Funciones
         {
             int iRet = -1;
             List<dsSPR.ListaMaterialesAparteRow> lA = _lListaMaterialesAparte.Where(x=>x.sCodNacional==sCodNacional).ToList();
+            //AGREGADO POR JOSE DURAND - INICIO - 12/01/2024
+            if (lA.Count > 0)
+            {
+                iRet = lA.Where(x => x.sTipoPedido == _sTipoPedido || x.sTipoPedido == "XXXX" || x.sTipoPedido == "" || x.sTipoPedido == null)
+               .Where(x => x.bEsCH == true)
+               .Count() >= 1 ? 1 : 0;
+            }            
+            //AGREGADO POR JOSE DURAND - FIN - 12/01/2024 
 
-            iRet = lA.Where(x => x.sTipoPedido == _sTipoPedido || x.sTipoPedido == "XXXX" || x.sTipoPedido == "" || x.sTipoPedido == null)
-                .Where(x => x.bEsCH == true)
-                .Count() >= 1 ? 1 : -1;
+            //COMENTADO POR JOSE DURAND - INICIO - 12/01/2024
+            //iRet = lA.Where(x => x.sTipoPedido == _sTipoPedido || x.sTipoPedido == "XXXX" || x.sTipoPedido == "" || x.sTipoPedido == null)
+            //    .Where(x => x.bEsCH == true)
+            //    .Count() >= 1 ? 1 : -1;
+            //COMENTADO POR JOSE DURAND - FIN - 12/01/2024
 
             return iRet;
 
