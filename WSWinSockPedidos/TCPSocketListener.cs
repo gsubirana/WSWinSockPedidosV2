@@ -471,6 +471,49 @@ namespace WSWinSockPedidos
                         pedido.listPedidosWithoutRepe.Add(sFinalLine);
                         break;
                     case "1020":
+                        // AGREGADO POR ALEX DIAZ 17/01/2024 -- INICI --
+                        sMaterial = sLine.Substring(4, 13); // Código tal cual llega
+                        iCantidad = int.Parse(sLine.Substring(17, 4));
+
+                        if (sTipoLin == "1030")
+                            iBonificacion = int.Parse(sLine.Substring(21, 4));
+                        else
+                            iBonificacion = 0;
+
+                        if (pedido.listPedidosWithoutRepe.Where(x => x.Substring(0, 4) == "1020" || x.Substring(0, 4) == "1030").Where(x => x.Substring(4, 13) == sMaterial).Count() == 0)
+                        {
+                            iTotalCantidad += iCantidad;
+                            iTotalBonificacion += iBonificacion;
+                            pedido.listPedidosWithoutRepe.Add(sLine);
+                        }
+                        else
+                        {
+                            sLineRepe = pedido.listPedidosWithoutRepe.Where(x => x.Substring(4, 13) == sMaterial).FirstOrDefault();
+
+                            iTotalCantidad += iCantidad;
+
+                            iCantidad = iCantidad + int.Parse(sLineRepe.Substring(17, 4));
+
+                            sFinalLine = sLineRepe.Substring(0, 17) + iCantidad.ToString().PadLeft(4, '0');
+
+                            if (sLineRepe.Substring(0, 4) == "1030" && sLineRepe.Substring(0, 4) == sTipoLin)
+                            {
+                                iTotalBonificacion += iBonificacion;
+
+                                iBonificacion = iBonificacion + int.Parse(sLineRepe.Substring(21, 4));
+
+                                sFinalLine = sFinalLine + iBonificacion.ToString().PadLeft(4, '0') + sLineRepe.Substring(25, sLineRepe.Length - 25);
+                            }
+                            else
+                            {
+                                sFinalLine += sLineRepe.Substring(21, sLineRepe.Length - 21);
+                            }
+
+                            pedido.listPedidosWithoutRepe[pedido.listPedidosWithoutRepe.FindIndex(x => x.Substring(4, 13) == sMaterial)] = sFinalLine;
+
+                        }
+                        break;
+                        // AGREGADO POR ALEX DIAZ 17/01/2024 -- FIN -- 
                     case "1030":
                         sMaterial = sLine.Substring(4, 13); // Código tal cual llega
                         iCantidad = int.Parse(sLine.Substring(17, 4));
@@ -1584,7 +1627,7 @@ namespace WSWinSockPedidos
         }
 
         private void TratarLineas1020i1030i1040(string oneLine, string tipoLin)
-        {
+        {//AQUI ESTA EL PROBLEMA
             int iIndexCodNacional = 0, iIndexCodNacionalSencer=0;
 
             //SCS 05/12/2022 booleano que avisa si es necesario sumar en el contador de pedidosLin
@@ -1619,6 +1662,8 @@ namespace WSWinSockPedidos
             // 1.- ETRON: L'últim dígit és 0 --> Cal calcular el dígit de control (ETRON posa un 0 al final i no al inici com la resa de majoristes quan sols envía 6 dígits)
             // 2.- La resta (cas normal): L'últim dígit és el de control 
             // Nota: un cas normal amb dígit 0 l'estem tractant com ETRON però no passa res perquè el càlcul donarà 0
+
+            //REVISAR ALEX - 22/01/2024
 
             string codProvisional = oneLine.Substring(10, 7);
             string sCodNacional = "", sCodNacionalSencer="";
@@ -1736,7 +1781,8 @@ namespace WSWinSockPedidos
                         else
                             sCodNacionalSencer = sustituto;
 
-                        pedido.ListasPedidos.codsNacionalsSencers[iIndexCodNacionalSencer] = sCodNacional;
+                        //pedido.ListasPedidos.codsNacionalsSencers[iIndexCodNacionalSencer] = sCodNacional;--COMENTADO POR ALEX - 19/01/2024
+                        pedido.ListasPedidos.codsNacionals[iIndexCodNacionalSencer] = sCodNacional;
                         pedido.ListasPedidos.codsNacionalsSencers[iIndexCodNacionalSencer] = sCodNacionalSencer;
 
                     }
@@ -1750,6 +1796,7 @@ namespace WSWinSockPedidos
                         sCodNacional = sustituto;
 
                         //Guardamos el nuevo con su correspondiente dígito de control
+                        //iIndexCodNacional = pedido.ListasPedidos.codsNacionals.FindIndex(ind => ind.Equals(sCodNacional));//AGREGADO POR ALEX - 19/01/2024
                         iIndexCodNacionalSencer = pedido.ListasPedidos.codsNacionalsSencers.FindIndex(ind => ind.Equals(sCodNacionalSencer));
 
                         if (sustituto.Length != 13)
@@ -1757,7 +1804,8 @@ namespace WSWinSockPedidos
                         else
                             sCodNacionalSencer = sustituto;
 
-                        pedido.ListasPedidos.codsNacionalsSencers[iIndexCodNacionalSencer] = sCodNacional;
+                        //pedido.ListasPedidos.codsNacionalsSencers[iIndexCodNacionalSencer] = sCodNacional;--COMENTADO POR ALEX - 19/01/2024
+                        pedido.ListasPedidos.codsNacionals[iIndexCodNacionalSencer] = sCodNacional;
                         pedido.ListasPedidos.codsNacionalsSencers[iIndexCodNacionalSencer] = sCodNacionalSencer;
 
                         // En el caso expositor no debe salir el mensaje de sustitución.
@@ -1793,6 +1841,10 @@ namespace WSWinSockPedidos
                 pedido.ListasPedidos.pedLines.RemoveAt(_numberOfLinesPerOrder);
                 bSumarCantidadLineasPerOrder = false;
                 //bEliminada = true;
+                //ALEX - INICIO - 22/01/2024
+                pedido.ListasPedidos.codsNacionals.RemoveAt(_numberOfLinesPerOrder);
+                pedido.ListasPedidos.codsNacionalsSencers.RemoveAt(_numberOfLinesPerOrder);
+                //ALEX - FIN - 22/01/2024
                 _qtyNOStada += qtyLin;
 
                 if (tipoLin == "1030")
@@ -1809,6 +1861,10 @@ namespace WSWinSockPedidos
                 //Resto ja que la línea afegida a _pedLines al pas anterior no s'ha de tenir en compte       
                 pedido.ListasPedidos.pedLines.RemoveAt(_numberOfLinesPerOrder);
                 bSumarCantidadLineasPerOrder = false;
+                //ALEX - INICIO - 22/01/2024
+                pedido.ListasPedidos.codsNacionals.RemoveAt(_numberOfLinesPerOrder);
+                pedido.ListasPedidos.codsNacionalsSencers.RemoveAt(_numberOfLinesPerOrder);
+                //ALEX - FIN - 22/01/2024
                 //bEliminada = true;
                 _qtyNOKPorInactivos += qtyLin;
 
@@ -1844,6 +1900,10 @@ namespace WSWinSockPedidos
                     //Resto ja que la línea afegida a _pedLines al pas anterior no s'ha de tenir en compte       
                     pedido.ListasPedidos.pedLines.RemoveAt(_numberOfLinesPerOrder);
                     bSumarCantidadLineasPerOrder = false;
+                    //ALEX - INICIO - 22/01/2024
+                    pedido.ListasPedidos.codsNacionals.RemoveAt(_numberOfLinesPerOrder);
+                    pedido.ListasPedidos.codsNacionalsSencers.RemoveAt(_numberOfLinesPerOrder);
+                    //ALEX - FIN - 22/01/2024
                     //bEliminada = true; //---- GSG (22/08/2016)
 
                     _qtyNoComerc += qtyLin;
@@ -1876,6 +1936,12 @@ namespace WSWinSockPedidos
                         pedido.ListasPedidos.pedLines.RemoveAt(_numberOfLinesPerOrder);
                         bSumarCantidadLineasPerOrder = false;
                         //bEliminada = true; //---- GSG (22/08/2016)
+                        //REVISAR ALEX - 22/01/2024
+                        
+                        //ALEX - INICIO - 22/01/2024
+                        pedido.ListasPedidos.codsNacionals.RemoveAt(_numberOfLinesPerOrder);
+                        pedido.ListasPedidos.codsNacionalsSencers.RemoveAt(_numberOfLinesPerOrder);
+                        //ALEX - FIN - 22/01/2024
 
                         _qtyBloquejats += qtyLin;
 
@@ -1928,6 +1994,10 @@ namespace WSWinSockPedidos
 
                                     pedido.ListasPedidos.pedLines.RemoveAt(_numberOfLinesPerOrder);
                                     bSumarCantidadLineasPerOrder = false;
+                                    //ALEX - INICIO - 22/01/2024
+                                    pedido.ListasPedidos.codsNacionals.RemoveAt(_numberOfLinesPerOrder);
+                                    pedido.ListasPedidos.codsNacionalsSencers.RemoveAt(_numberOfLinesPerOrder);
+                                    //ALEX - FIN - 22/01/2024
                                     bEliminada = true; //---- GSG (22/08/2016)         
 
                                     //---- GSG (22/07/2019) -- Ara també tindrem el compte les línies despreciades per a condició d'import
