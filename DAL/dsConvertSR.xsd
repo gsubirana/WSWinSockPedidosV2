@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsConvertSR" targetNamespace="http://tempuri.org/dsConvertSR.xsd" xmlns:mstns="http://tempuri.org/dsConvertSR.xsd" xmlns="http://tempuri.org/dsConvertSR.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=AZSTESCRMDBT;Initial Catalog=GESTCRMCETEST;User ID=sa;Password=Bayvit1429" IsAppSettingsProperty="false" Modifier="Assembly" Name="AZSTESCRMDBT.GESTCRMCETEST.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsConvertSR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsConvertSR" msprop:Generator_UserDSName="dsConvertSR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SRTiposPedido" msprop:Generator_TableClassName="SRTiposPedidoDataTable" msprop:Generator_TableVarName="tableSRTiposPedido" msprop:Generator_TablePropName="SRTiposPedido" msprop:Generator_RowDeletingName="SRTiposPedidoRowDeleting" msprop:Generator_RowChangingName="SRTiposPedidoRowChanging" msprop:Generator_RowEvHandlerName="SRTiposPedidoRowChangeEventHandler" msprop:Generator_RowDeletedName="SRTiposPedidoRowDeleted" msprop:Generator_UserTableName="SRTiposPedido" msprop:Generator_RowChangedName="SRTiposPedidoRowChanged" msprop:Generator_RowEvArgName="SRTiposPedidoRowChangeEvent" msprop:Generator_RowClassName="SRTiposPedidoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sID" msprop:Generator_ColumnVarNameInTable="columnsID" msprop:Generator_ColumnPropNameInRow="sID" msprop:Generator_ColumnPropNameInTable="sIDColumn" msprop:Generator_UserColumnName="sID" type="xs:string" minOccurs="0" />
+              <xs:element name="idInterfaz" msprop:Generator_ColumnVarNameInTable="columnidInterfaz" msprop:Generator_ColumnPropNameInRow="idInterfaz" msprop:Generator_ColumnPropNameInTable="idInterfazColumn" msprop:Generator_UserColumnName="idInterfaz" type="xs:short" minOccurs="0" />
+              <xs:element name="sCod" msprop:Generator_ColumnVarNameInTable="columnsCod" msprop:Generator_ColumnPropNameInRow="sCod" msprop:Generator_ColumnPropNameInTable="sCodColumn" msprop:Generator_UserColumnName="sCod" type="xs:string" minOccurs="0" />
+              <xs:element name="sDescripcion" msprop:Generator_ColumnVarNameInTable="columnsDescripcion" msprop:Generator_ColumnPropNameInRow="sDescripcion" msprop:Generator_ColumnPropNameInTable="sDescripcionColumn" msprop:Generator_UserColumnName="sDescripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="iEstado" msprop:Generator_ColumnVarNameInTable="columniEstado" msprop:Generator_ColumnPropNameInRow="iEstado" msprop:Generator_ColumnPropNameInTable="iEstadoColumn" msprop:Generator_UserColumnName="iEstado" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SRTiposPosicion" msprop:Generator_TableClassName="SRTiposPosicionDataTable" msprop:Generator_TableVarName="tableSRTiposPosicion" msprop:Generator_TablePropName="SRTiposPosicion" msprop:Generator_RowDeletingName="SRTiposPosicionRowDeleting" msprop:Generator_RowChangingName="SRTiposPosicionRowChanging" msprop:Generator_RowEvHandlerName="SRTiposPosicionRowChangeEventHandler" msprop:Generator_RowDeletedName="SRTiposPosicionRowDeleted" msprop:Generator_UserTableName="SRTiposPosicion" msprop:Generator_RowChangedName="SRTiposPosicionRowChanged" msprop:Generator_RowEvArgName="SRTiposPosicionRowChangeEvent" msprop:Generator_RowClassName="SRTiposPosicionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sID" msprop:Generator_ColumnVarNameInTable="columnsID" msprop:Generator_ColumnPropNameInRow="sID" msprop:Generator_ColumnPropNameInTable="sIDColumn" msprop:Generator_UserColumnName="sID" type="xs:string" minOccurs="0" />
+              <xs:element name="idInterfaz" msprop:Generator_ColumnVarNameInTable="columnidInterfaz" msprop:Generator_ColumnPropNameInRow="idInterfaz" msprop:Generator_ColumnPropNameInTable="idInterfazColumn" msprop:Generator_UserColumnName="idInterfaz" type="xs:short" minOccurs="0" />
+              <xs:element name="sCod" msprop:Generator_ColumnVarNameInTable="columnsCod" msprop:Generator_ColumnPropNameInRow="sCod" msprop:Generator_ColumnPropNameInTable="sCodColumn" msprop:Generator_UserColumnName="sCod" type="xs:string" minOccurs="0" />
+              <xs:element name="sDescripcion" msprop:Generator_ColumnVarNameInTable="columnsDescripcion" msprop:Generator_ColumnPropNameInRow="sDescripcion" msprop:Generator_ColumnPropNameInTable="sDescripcionColumn" msprop:Generator_UserColumnName="sDescripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="iEstado" msprop:Generator_ColumnVarNameInTable="columniEstado" msprop:Generator_ColumnPropNameInRow="iEstado" msprop:Generator_ColumnPropNameInTable="iEstadoColumn" msprop:Generator_UserColumnName="iEstado" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SROrgVentas" msprop:Generator_TableClassName="SROrgVentasDataTable" msprop:Generator_TableVarName="tableSROrgVentas" msprop:Generator_TablePropName="SROrgVentas" msprop:Generator_RowDeletingName="SROrgVentasRowDeleting" msprop:Generator_RowChangingName="SROrgVentasRowChanging" msprop:Generator_RowEvHandlerName="SROrgVentasRowChangeEventHandler" msprop:Generator_RowDeletedName="SROrgVentasRowDeleted" msprop:Generator_UserTableName="SROrgVentas" msprop:Generator_RowChangedName="SROrgVentasRowChanged" msprop:Generator_RowEvArgName="SROrgVentasRowChangeEvent" msprop:Generator_RowClassName="SROrgVentasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sID" msprop:Generator_ColumnVarNameInTable="columnsID" msprop:Generator_ColumnPropNameInRow="sID" msprop:Generator_ColumnPropNameInTable="sIDColumn" msprop:Generator_UserColumnName="sID" type="xs:string" minOccurs="0" />
+              <xs:element name="idInterfaz" msprop:Generator_ColumnVarNameInTable="columnidInterfaz" msprop:Generator_ColumnPropNameInRow="idInterfaz" msprop:Generator_ColumnPropNameInTable="idInterfazColumn" msprop:Generator_UserColumnName="idInterfaz" type="xs:short" minOccurs="0" />
+              <xs:element name="sCod" msprop:Generator_ColumnVarNameInTable="columnsCod" msprop:Generator_ColumnPropNameInRow="sCod" msprop:Generator_ColumnPropNameInTable="sCodColumn" msprop:Generator_UserColumnName="sCod" type="xs:string" minOccurs="0" />
+              <xs:element name="sDescripcion" msprop:Generator_ColumnVarNameInTable="columnsDescripcion" msprop:Generator_ColumnPropNameInRow="sDescripcion" msprop:Generator_ColumnPropNameInTable="sDescripcionColumn" msprop:Generator_UserColumnName="sDescripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="iEstado" msprop:Generator_ColumnVarNameInTable="columniEstado" msprop:Generator_ColumnPropNameInRow="iEstado" msprop:Generator_ColumnPropNameInTable="iEstadoColumn" msprop:Generator_UserColumnName="iEstado" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SRCanalDist" msprop:Generator_TableClassName="SRCanalDistDataTable" msprop:Generator_TableVarName="tableSRCanalDist" msprop:Generator_TablePropName="SRCanalDist" msprop:Generator_RowDeletingName="SRCanalDistRowDeleting" msprop:Generator_RowChangingName="SRCanalDistRowChanging" msprop:Generator_RowEvHandlerName="SRCanalDistRowChangeEventHandler" msprop:Generator_RowDeletedName="SRCanalDistRowDeleted" msprop:Generator_UserTableName="SRCanalDist" msprop:Generator_RowChangedName="SRCanalDistRowChanged" msprop:Generator_RowEvArgName="SRCanalDistRowChangeEvent" msprop:Generator_RowClassName="SRCanalDistRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sID" msprop:Generator_ColumnVarNameInTable="columnsID" msprop:Generator_ColumnPropNameInRow="sID" msprop:Generator_ColumnPropNameInTable="sIDColumn" msprop:Generator_UserColumnName="sID" type="xs:string" minOccurs="0" />
+              <xs:element name="idInterfaz" msprop:Generator_ColumnVarNameInTable="columnidInterfaz" msprop:Generator_ColumnPropNameInRow="idInterfaz" msprop:Generator_ColumnPropNameInTable="idInterfazColumn" msprop:Generator_UserColumnName="idInterfaz" type="xs:short" minOccurs="0" />
+              <xs:element name="sCod" msprop:Generator_ColumnVarNameInTable="columnsCod" msprop:Generator_ColumnPropNameInRow="sCod" msprop:Generator_ColumnPropNameInTable="sCodColumn" msprop:Generator_UserColumnName="sCod" type="xs:string" minOccurs="0" />
+              <xs:element name="sDescripcion" msprop:Generator_ColumnVarNameInTable="columnsDescripcion" msprop:Generator_ColumnPropNameInRow="sDescripcion" msprop:Generator_ColumnPropNameInTable="sDescripcionColumn" msprop:Generator_UserColumnName="sDescripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="iEstado" msprop:Generator_ColumnVarNameInTable="columniEstado" msprop:Generator_ColumnPropNameInRow="iEstado" msprop:Generator_ColumnPropNameInTable="iEstadoColumn" msprop:Generator_UserColumnName="iEstado" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MatSAPAlemania" msprop:Generator_TableClassName="MatSAPAlemaniaDataTable" msprop:Generator_TableVarName="tableMatSAPAlemania" msprop:Generator_TablePropName="MatSAPAlemania" msprop:Generator_RowDeletingName="MatSAPAlemaniaRowDeleting" msprop:Generator_RowChangingName="MatSAPAlemaniaRowChanging" msprop:Generator_RowEvHandlerName="MatSAPAlemaniaRowChangeEventHandler" msprop:Generator_RowDeletedName="MatSAPAlemaniaRowDeleted" msprop:Generator_UserTableName="MatSAPAlemania" msprop:Generator_RowChangedName="MatSAPAlemaniaRowChanged" msprop:Generator_RowEvArgName="MatSAPAlemaniaRowChangeEvent" msprop:Generator_RowClassName="MatSAPAlemaniaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sIdMaterial" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsIdMaterial" msprop:Generator_ColumnPropNameInRow="sIdMaterial" msprop:Generator_ColumnPropNameInTable="sIdMaterialColumn" msprop:Generator_UserColumnName="sIdMaterial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sCodNacional" msprop:Generator_ColumnVarNameInTable="columnsCodNacional" msprop:Generator_ColumnPropNameInRow="sCodNacional" msprop:Generator_ColumnPropNameInTable="sCodNacionalColumn" msprop:Generator_UserColumnName="sCodNacional" type="xs:string" minOccurs="0" />
+              <xs:element name="codAlemania" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncodAlemania" msprop:Generator_ColumnPropNameInRow="codAlemania" msprop:Generator_ColumnPropNameInTable="codAlemaniaColumn" msprop:Generator_UserColumnName="codAlemania" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SRCondPago" msprop:Generator_TableClassName="SRCondPagoDataTable" msprop:Generator_TableVarName="tableSRCondPago" msprop:Generator_TablePropName="SRCondPago" msprop:Generator_RowDeletingName="SRCondPagoRowDeleting" msprop:Generator_RowChangingName="SRCondPagoRowChanging" msprop:Generator_RowEvHandlerName="SRCondPagoRowChangeEventHandler" msprop:Generator_RowDeletedName="SRCondPagoRowDeleted" msprop:Generator_UserTableName="SRCondPago" msprop:Generator_RowChangedName="SRCondPagoRowChanged" msprop:Generator_RowEvArgName="SRCondPagoRowChangeEvent" msprop:Generator_RowClassName="SRCondPagoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codCondPago" msprop:Generator_ColumnVarNameInTable="columncodCondPago" msprop:Generator_ColumnPropNameInRow="codCondPago" msprop:Generator_ColumnPropNameInTable="codCondPagoColumn" msprop:Generator_UserColumnName="codCondPago">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codCondPagoEquivalente" msprop:Generator_ColumnVarNameInTable="columncodCondPagoEquivalente" msprop:Generator_ColumnPropNameInRow="codCondPagoEquivalente" msprop:Generator_ColumnPropNameInTable="codCondPagoEquivalenteColumn" msprop:Generator_UserColumnName="codCondPagoEquivalente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SRClientes" msprop:Generator_TableClassName="SRClientesDataTable" msprop:Generator_TableVarName="tableSRClientes" msprop:Generator_TablePropName="SRClientes" msprop:Generator_RowDeletingName="SRClientesRowDeleting" msprop:Generator_RowChangingName="SRClientesRowChanging" msprop:Generator_RowEvHandlerName="SRClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="SRClientesRowDeleted" msprop:Generator_UserTableName="SRClientes" msprop:Generator_RowChangedName="SRClientesRowChanged" msprop:Generator_RowEvArgName="SRClientesRowChangeEvent" msprop:Generator_RowClassName="SRClientesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sIdCliente" msprop:Generator_ColumnVarNameInTable="columnsIdCliente" msprop:Generator_ColumnPropNameInRow="sIdCliente" msprop:Generator_ColumnPropNameInTable="sIdClienteColumn" msprop:Generator_UserColumnName="sIdCliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codCliEquivalente" msprop:Generator_ColumnVarNameInTable="columncodCliEquivalente" msprop:Generator_ColumnPropNameInRow="codCliEquivalente" msprop:Generator_ColumnPropNameInTable="codCliEquivalenteColumn" msprop:Generator_UserColumnName="codCliEquivalente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SRCondPago" />
+      <xs:field xpath="mstns:codCondPago" />
+      <xs:field xpath="mstns:codCondPagoEquivalente" />
+    </xs:unique>
+    <xs:unique name="SRClientes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SRClientes" />
+      <xs:field xpath="mstns:sIdCliente" />
+      <xs:field xpath="mstns:codCliEquivalente" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
